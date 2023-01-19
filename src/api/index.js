@@ -7,8 +7,6 @@ const API = axios.create({
   baseURL: "memoriesapp-server-production.up.railway.app",
 }); */
 
-console.log(API);
-
 API.interceptors.request.use((req) => {
   if (localStorage.getItem("profile")) {
     req.headers.Authorization = `Bearer ${
